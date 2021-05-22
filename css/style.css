@@ -1,0 +1,250 @@
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #fff;
+    color: #243a6f;
+    position:relative;
+    z-index : 1;
+
+}
+
+nav{
+    background:#243a6f;
+    color:hsl(224, 27%, 92%);
+    display:flex;
+    justify-content: space-between;
+
+}
+nav .mainMenu{
+    display:flex;
+    list-style:none;
+}
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:hsl(180, 18%, 93%);
+    font-size:1.5rem ;
+}
+nav .mainMenu li a:hover{
+    background:rgb(10, 230, 182);
+}
+nav .openMenu{
+    font-size:2rem;
+    margin:20px;
+    display:none;
+    cursor:pointer;
+}
+nav .mainMenu .closeMenu , .icons i{
+    font-size:2rem;
+    display: none;
+    cursor:pointer;
+}
+.fa-facebook:hover{color:hsl(123, 92%, 47%);}
+.fa-instagram:hover{color:hsl(123, 92%, 47%);}
+.fa-twitter:hover{color:hsl(81, 92%, 47%);}
+.fa-github:hover{color:hsl(81, 92%, 47%);}
+
+nav .logo{
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+@media (max-width:768px){
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+         top:0;
+        right:0;
+        left:0;
+        z-index:10;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        background:#253b70;
+        transition: top 1s ease;
+        display:none;
+
+    }
+    nav .mainMenu .closeMenu{
+        display: block;
+        position:absolute;
+        top:20px;
+        right:20px;
+
+    }
+    nav .openMenu{
+        display:block;
+    }
+    nav .mainMenu li a:hover{
+        background: none;
+        color:burlywood;
+        font-size: 1.6rem;
+
+    }
+    .icons i{
+        display: inline-block;
+        padding: 12px;
+    }
+}
+
+
+
+
+
+h1,
+h2,
+h3,
+h4{
+font-weight: 500;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.container-md{
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.banner1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.model-content{
+    height:100vh;
+    padding-top: 10%;
+    padding-left: 45px;
+    
+}
+
+.model-img {
+    height: 95vh;
+    width: 400px;
+    padding: 25px 40px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.bgimg{
+    width: 30%
+}
+
+.model-content h2{
+    color:#b888ff;
+    font-size: 3rem;
+    font-weight:700;
+    margin-bottom: 1rem;
+}
+.model-content .discount{
+    color:#fbb;
+}
+.model-content h1 span{
+    color: #253b70;
+    font-size: 6rem;
+    font-weight:700;
+    display: block;
+    line-height:  1;
+    text-shadow: 3px 3px 0 #f1f1f1, 4px 4px 0 #f1f1f1;
+
+}
+.btn{
+    display: inline-block;
+    background-color: #fc7c7c;
+    padding: 1.5rem 4 rem;
+    color: #fff;
+    font-weight:600;
+    text-transform:uppercase;
+    margin-top: 3rem;
+}
+
+@media only screen and (max-width: 1200px){
+    .header .model-img{
+        right:-20%;
+    }
+    .model-content {
+        transform:translate(20%, -50%);
+
+    }
+    .model-content h2{
+        font-size:2 rem;
+    }
+    .model-content h1 span{
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 996px){
+    .header{
+        min-height:70vh;
+    }
+    .header .model-img{
+        height:40 rem;
+        right:-10%;
+    }
+
+}
+@media only screen and (max-width: 567px){
+    .header{
+        min-height: 100vh;
+    }
+    .header .model-img{
+        bottom:-15%;
+        right: 0;
+    }
+    .model-content {
+        transform:translate(15%, -50%);
+
+    }
+    .model-content h2{
+        font-size:1.8rem;
+    }
+    .model-content h1 span{
+        font-size: 4rem;
+    }
+    .model-content a{
+        padding: 1rem 3rem;
+        }
+}
+/*Advert*/
+
+.section{
+    padding: 10rem 0 5rem 0;
+}
+.advert-center{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minimax(30rem, 1fr));
+    gap:3rem;
+}
+
